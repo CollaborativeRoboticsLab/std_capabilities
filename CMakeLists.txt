@@ -7,4 +7,14 @@ install(DIRECTORY interfaces
   DESTINATION share/${PROJECT_NAME}
 )
 
+# install semantic interface files
+install(DIRECTORY semantic_interfaces
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# install launch files
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()
