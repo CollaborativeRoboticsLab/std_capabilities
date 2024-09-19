@@ -8,14 +8,16 @@ interface:
   topics:
     "/rgbd_sensor/rgb/camera_info":
       type: "sensor_msgs/CameraInfo"
+      description: "Camera info for the RGB image."
     "/rgbd_sensor/rgb/image_raw":
       type: "sensor_msgs/Image"
       description: "Raw color image to go along with the camera info."
     "/rgbd_sensor/rgb/image_color":
-      description: "color image to go along with the camera info."
       type: "sensor_msgs/PointCloud2"
+      description: "color image to go along with the camera info."
     "/rgbd_sensor/depth/camera_info":
       type: "sensor_msgs/CameraInfo"
+      description: "Camera info for the depth image."
     "/rgbd_sensor/depth/image_raw":
       type: "sensor_msgs/Image"
       description: "Raw depth image to go along with the camera info."

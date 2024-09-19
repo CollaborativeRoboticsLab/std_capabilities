@@ -3,10 +3,10 @@
 name: RobotStatePublisher
 spec_version: 1
 spec_type: interface
-description: >
-  This interface describes the basic ROS interface for retrieving information about the robot's state.
-  This includes loading the robot's model description in URDF onto the parameter server,
-  publishing the robot's joint states and TF transformations.
+description: |
+  "This interface describes the basic ROS interface for retrieving information about the robot state."
+  "This includes loading the robot model description in URDF onto the parameter server,"
+  "publishing the robot joint states and TF transformations."
 interface:
   topics:
     "/joint_states":
@@ -14,8 +14,8 @@ interface:
       description: "Name, position [rad], velocity [rad/sec] and effort [Nm] for each joint of the robot."
     "/tf":
       type: "tf2_msgs/TFMessage"
-      description: "TF transforms for a links of the robot described by robot's model"
+      description: "TF transforms for a links of the robot described by robot model"
   parameters:
     "robot_description":
       type: "URDF"
-      description: "Description of the robot's model in URDF"
+      description: "Description of the robot model in URDF"
