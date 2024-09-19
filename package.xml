@@ -44,6 +44,10 @@
       interfaces/RobotStatePublisher.yaml
     </capability_interface>
 
+    <capability_interface>
+      interfaces/empty.yaml
+    </capability_interface>
+
     <!-- semantic interfaces -->
     <semantic_capability_interface>
       semantic_interfaces/not_empty.yaml
