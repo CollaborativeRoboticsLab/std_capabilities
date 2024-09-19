@@ -1,7 +1,7 @@
 %YAML 1.1
 ---
 name: Navigation2D
-spec_version: 1
+spec_version: 1.1
 spec_type: interface
 description: 'This interface describes the basic ROS components used in standard 2D navigation. In addition to the ROS components described here, the robot should provide TF transforms from "map" -> "odom" and "odom" -> "base_link", in accordance with REP-0105 <http://www.ros.org/reps/rep-0105.html>.'
 interface:
