@@ -57,5 +57,8 @@
     <capability_provider>
       providers/empty.yaml
     </capability_provider>
+    <capability_provider>
+      providers/not_empty.yaml
+    </capability_provider>
   </export>
 </package>
