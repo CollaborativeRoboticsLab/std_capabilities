@@ -6,10 +6,10 @@ spec_type: provider
 spec_version: 1.1
 description: the empty capability provider for the empty interface
 implements: std_capabilities/empty
-runner: launch/empty.launch.py
+runner: capabilities2_runner::DummyRunner
 depends_on:
   "std_capabilities/not_empty":
-    provider: "std_capabilities/empty_depend"
+    provider: "std_capabilities/not_empty"
 remappings:
   topics:
-    "empty": "not_empty"
+    "empty": "almost/empty"
