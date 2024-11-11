@@ -55,7 +55,10 @@
 
     <!-- providers -->
     <capability_provider>
-      providers/empty.yaml
+      providers/empty_launch_provider.yaml
+    </capability_provider>
+    <capability_provider>
+      providers/empty_runner_provider.yaml
     </capability_provider>
     <capability_provider>
       providers/not_empty.yaml
