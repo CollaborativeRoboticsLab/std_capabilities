@@ -5,8 +5,8 @@ name: PromptTextRunner
 spec_type: provider
 spec_version: 1.1
 description: "The capability provider for the prompting interface from prompt tools. This can be used for prompting text."
-implements: std_capabilities2/PromptTextRunner
+implements: std_capabilities/PromptTextRunner
 runner: capabilities2_runner::PromptTextRunner
 depends_on:
-  "std_capabilities2/PromptLaunchRunner":
-    provider: "std_capabilities2/PromptLaunchRunner"
+  "std_capabilities/PromptLaunchRunner":
+    provider: "std_capabilities/PromptLaunchRunner"
