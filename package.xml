@@ -54,7 +54,7 @@
       interfaces/empty.yaml
     </capability_interface>
 
-<!-- Nav2 interfaces -->
+    <!-- Nav2 interfaces -->
     <capability_interface>
       interfaces/nav2/WaypointRunner.yaml
     </capability_interface>
@@ -111,6 +111,11 @@
 
     <capability_interface>
       interfaces/audio/SpeakerLaunchRunner.yaml
+    </capability_interface>
+
+    <!-- Capaility interfaces -->
+    <capability_interface>
+      interfaces/capabilities/FabricCompletionRunner.yaml
     </capability_interface>
 
     <!-- semantic interfaces -->
@@ -188,6 +193,11 @@
 
     <capability_provider>
       providers/audio/SpeakerLaunchRunner.yaml
+    </capability_provider>
+
+    <!-- Capabilities providers -->
+    <capability_provider>
+      providers/capabilities/FabricCompletionRunner.yaml
     </capability_provider>
   </export>
 </package>
