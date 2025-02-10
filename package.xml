@@ -85,15 +85,15 @@
     </capability_interface>
 
     <capability_interface>
+      interfaces/prompt/PromptCapabilityRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
       interfaces/prompt/PromptOccupancyRunner.yaml
     </capability_interface>
 
     <capability_interface>
-      interfaces/prompt/PromptPlanRequestRunner.yaml
-    </capability_interface>
-
-    <capability_interface>
-      interfaces/prompt/PromptPlanResponseRunner.yaml
+      interfaces/prompt/PromptPlanRunner.yaml
     </capability_interface>
 
     <!-- Audio interfaces -->
@@ -116,6 +116,14 @@
     <!-- Capaility interfaces -->
     <capability_interface>
       interfaces/capabilities/FabricCompletionRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/capabilities/FabricSetPlanRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/capabilities/CapabilityGetRunner.yaml
     </capability_interface>
 
     <!-- semantic interfaces -->
@@ -167,15 +175,16 @@
     </capability_provider>
 
     <capability_provider>
+      providers/prompt/PromptCapabilityRunner.yaml
+    </capability_provider>
+
+
+    <capability_provider>
       providers/prompt/PromptOccupancyRunner.yaml
     </capability_provider>
 
     <capability_provider>
-      providers/prompt/PromptPlanRequestRunner.yaml
-    </capability_provider>
-
-    <capability_provider>
-      providers/prompt/PromptPlanResponseRunner.yaml
+      providers/prompt/PromptPlanRunner.yaml
     </capability_provider>
 
     <!-- Audio providers -->
@@ -199,5 +208,14 @@
     <capability_provider>
       providers/capabilities/FabricCompletionRunner.yaml
     </capability_provider>
+
+    <capability_provider>
+      providers/capabilities/FabricSetPlanRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/capabilities/CapabilityGetRunner.yaml
+    </capability_provider>
+
   </export>
 </package>

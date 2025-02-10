@@ -9,8 +9,21 @@ description: "This capability depends on the navigation stack functionalities an
               '<Event name=std_capabilities/RobotPoseRunner provider=std_capabilities/RobotPoseRunner/>'. Upon the successful execution 
               of this capability, another capability that allows robot pose prompting needs to be triggered for transfer of robot pose 
               data to the decision making authority for future decision making. 
-              '<Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner/>' can be used as an robot pose 
-              prompting capability for this."
+              '<Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner />' can be used as an robot pose 
+              prompting capability for this. Data structure used follows the same structure as geometry_msgs::msg::Pose and is as follows
+                  '<Pose>
+                      <position>
+                          <x>1.23</x>
+                          <y>4.56</y>
+                          <z>7.89</z>
+                      </position>
+                      <orientation>
+                          <x>0.12</x>
+                          <y>0.34</y>
+                          <z>0.56</z>
+                          <w>0.78</w>
+                      </orientation>
+                  </Pose>' "
 interface:
   topics:
     "/pose":

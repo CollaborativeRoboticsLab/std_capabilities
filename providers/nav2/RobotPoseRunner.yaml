@@ -7,6 +7,3 @@ spec_version: 1.1
 description: "The capability provider for the robot's odometry interface"
 implements: std_capabilities/RobotPoseRunner
 runner: capabilities2_runner::RobotPoseRunner
-# depends_on:
-#   "std_capabilities/Nav2LaunchRunner":
-#     provider: "std_capabilities/Nav2LaunchRunner"

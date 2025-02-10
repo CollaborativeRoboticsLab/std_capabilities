@@ -1,16 +1,16 @@
 %YAML 1.1
 ---
-name: PromptPlanRequestRunner
+name: PromptPlanRunner
 spec_version: 1.1
 spec_type: interface
 description: "This capability depends on the prompt tools stack functionalities and allows an decision making authority such as an
               LLM to recieve a request to create a new plan at the end of an execution plan. This capability can can be trigged with 
               an xml command such as 
-              '<Event name=std_capabilities/PromptPlanRequestRunner provider=std_capabilities/PromptPlanRequestRunner replan=false/>'. 
+              '<Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task/>'. 
               This will prompt the decision making authority to create a new execution plan either to continue the current plan or to 
-              focus on a new task depending on the state of the robot. This capability needs to be in every execution plan created and 
-              needs be the capability before the last in any  plan. Any and all execution plans calculated by this capability need to 
-              be contained within <Plan> and </Plan> xml tags. Capabilities within the execution plan can be organised using sqeuntial, 
+              focus on a new task given by $task value depending on the state of the robot. This capability needs to be in every execution 
+              plan created and needs be the capability before the last in any  plan. Any and all execution plans calculated by this capability  
+              need to be contained within <Plan> and </Plan> xml tags. Capabilities within the execution plan can be organised using sqeuntial, 
               parallel and recovery control flows. Capabilities in the sequential control flow will be triggered one after the other 
               depending on precceding capability's successful execution. Capabilities under sequential control flow need to be contained  
               within <Control name=sequential> </Control> xml tags. Capabilities in the parallel control flow will be triggered all 
@@ -27,7 +27,7 @@ description: "This capability depends on the prompt tools stack functionalities 
                       <Event name=std_capabilities/PromptOccupancyRunner provider=std_capabilities/PromptOccupancyRunner/>
                       <Event name=std_capabilities/RobotPoseRunner provider=std_capabilities/RobotPoseRunner/>
                       <Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner/>
-                      <Event name=std_capabilities/PromptPlanRequestRunner provider=std_capabilities/PromptPlanRequestRunner replan=false/>
+                      <Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task/>
                       <Event name=std_capabilities/PromptPlanResponseRunner provider=std_capabilities/PromptPlanResponseRunner/>
                   </Control>
               </Plan>
@@ -36,4 +36,4 @@ interface:
   services:
     "/prompt":
       type: "prompt_msgs/srv/Prompt"
-      description: "This capability focuses on capturing speech towards robot as text and transfering them to decision making authority."
+      description: "This capability focuses on requesting a decision making authority to create a plan for a specific task."
