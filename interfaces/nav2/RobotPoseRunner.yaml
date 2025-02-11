@@ -9,8 +9,9 @@ description: "This capability depends on the navigation stack functionalities an
               '<Event name=std_capabilities/RobotPoseRunner provider=std_capabilities/RobotPoseRunner/>'. Upon the successful execution 
               of this capability, another capability that allows robot pose prompting needs to be triggered for transfer of robot pose 
               data to the decision making authority for future decision making. 
-              '<Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner />' can be used as an robot pose 
-              prompting capability for this. Data structure used follows the same structure as geometry_msgs::msg::Pose and is as follows
+              '<Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner  model=llama3.1:8b/>' can be used 
+              as an robot pose prompting capability for this. Data structure used follows the same structure as geometry_msgs::msg::Pose 
+              and is as follows
                   '<Pose>
                       <position>
                           <x>1.23</x>

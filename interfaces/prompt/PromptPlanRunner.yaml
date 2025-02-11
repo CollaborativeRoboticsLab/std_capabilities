@@ -6,7 +6,7 @@ spec_type: interface
 description: "This capability depends on the prompt tools stack functionalities and allows an decision making authority such as an
               LLM to recieve a request to create a new plan at the end of an execution plan. This capability can can be trigged with 
               an xml command such as 
-              '<Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task  model=llama3.1:8b stream=false/>'. 
+              '<Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task  model=llama3.1:8b/>'. 
               This will prompt the decision making authority to create a new execution plan either to continue the current plan or to 
               focus on a new task given by $task value depending on the state of the robot. This capability needs to be in every execution 
               plan created and needs be the capability before the last in any  plan. Any and all execution plans calculated by this capability  
@@ -15,20 +15,20 @@ description: "This capability depends on the prompt tools stack functionalities 
               depending on precceding capability's successful execution. Capabilities under sequential control flow need to be contained  
               within <Control name=sequential> </Control> xml tags. Capabilities in the parallel control flow will be triggered all 
               at once and will be executed parallely. Capabilities under parallel control flow needs to come within <Control name=parallel> 
-              </Control> xml tags. Capabilities in the recovery control flow will be triggered one after the other depending only on  
-              precceding capability's failed execution. Capabilities under recovery control flow need to come within <Control name=recovery>
-              </Control> xml tags. Upon the successful execution of this capability, another capability need to be executed for verifying 
-              and starting the execution. It can be done via '<Event name=std_capabilities/PromptPlanResponseRunner provider=std_capabilities/PromptPlanResponseRunner/>' 
+              </Control> xml tags. Capabilities in the recovery control flow will be triggered one after the other depending only on precceding  
+              capability's failed execution. Capabilities under recovery control flow need to come within <Control name=recovery> </Control> xml tags. 
+              Upon the successful execution of this capability, another capability need to be executed for verifying and starting the execution. 
+              It can be done via '<Event name=std_capabilities/PromptPlanResponseRunner provider=std_capabilities/PromptPlanResponseRunner/>' 
               xml command. A most basic plan with all compulsory runners is as follows,
               <?xml version=1.0 encoding=UTF-8?>
               <Plan>
                   <Control name=sequential>
                       <Event name=std_capabilities/OccupancyGridRunner provider=std_capabilities/OccupancyGridRunner/>
-                      <Event name=std_capabilities/PromptOccupancyRunner provider=std_capabilities/PromptOccupancyRunner model=llama3.1:8b stream=false/>
+                      <Event name=std_capabilities/PromptOccupancyRunner provider=std_capabilities/PromptOccupancyRunner model=llama3.1:8b/>
                       <Event name=std_capabilities/RobotPoseRunner provider=std_capabilities/RobotPoseRunner />
-                      <Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner model=llama3.1:8b stream=false/>
-                      <Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task  model=llama3.1:8b stream=false/>
-                      <Event name=std_capabilities/PromptPlanResponseRunner provider=std_capabilities/PromptPlanResponseRunner model=llama3.1:8b stream=false/>
+                      <Event name=std_capabilities/PromptPoseRunner provider=std_capabilities/PromptPoseRunner model=llama3.1:8b/>
+                      <Event name=std_capabilities/PromptPlanRunner provider=std_capabilities/PromptPlanRunner replan=false task=$task  model=llama3.1:8b/>
+                      <Event name=std_capabilities/PromptPlanResponseRunner provider=std_capabilities/PromptPlanResponseRunner model=llama3.1:8b/>
                   </Control>
               </Plan>
               "
