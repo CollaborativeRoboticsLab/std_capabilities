@@ -9,7 +9,7 @@ description: "This capability depends on the navigation stack functionalities an
               with '<Event name=std_capabilities/OccupancyGridRunner provider=std_capabilities/OccupancyGridRunner/>' xml command. 
               Upon the successful execution of this capability, another capability that allows occupancy grid data transfer to the 
               decision making authority needs to be triggered. Such a capability can be triggered via
-              '<Event name=std_capabilities/PromptOccupancyRunner provider=std_capabilities/PromptOccupancyRunner  model=llama3.1:8b/>' 
+              '<Event name=std_capabilities/PromptOccupancyRunner provider=std_capabilities/PromptOccupancyRunner  />' 
               xml command. The data structure used to transfer the data follows tha same structure as ros2 msg nav_msgs::msg::OccupancyGrid 
               and is allows follows,
                       '<OccupancyGrid>
