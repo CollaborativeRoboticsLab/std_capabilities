@@ -3,8 +3,7 @@
 name: PromptLaunchRunner
 spec_version: 1.1
 spec_type: interface
-description: "This capability implements the prompt tools stack and is a dependency for other capabilities
-              that use prompting functionalities."
+description: "This capability implements the prompt tools stack and is a dependency for other capabilities that use prompting functionalities."
 interface:
   topics:
     "/history":
@@ -17,4 +16,5 @@ interface:
   actions:
     "/prompt":
       type: "prompt_msgs/action/Prompt"
-      description: "The prompt goal that requires a response, the action interface publishes partial results. returns the generated response"
+      description: "The prompt goal that requires a response, the action interface publishes partial results. returns 
+                    the generated response"
