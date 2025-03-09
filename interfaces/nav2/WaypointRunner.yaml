@@ -9,7 +9,9 @@ description: "This capability depends on the navigation stack functionalities an
               '<Event name=std_capabilities/WaypointRunner provider=std_capabilities/WaypointRunner x='$value' y='$value' />'. 
               '$value' represents a value in meters. As an example 
               '<Event name=std_capabilities/WaypointRunner provider=std_capabilities/WaypointRunner x='1.2' y='0.8' /> means the 
-              robot will move 1.2 meters forward and 0.8 meters to the right side."
+              robot will move 1.2 meters forward and 0.8 meters to the right side. capability std_capabilities/RobotPoseRunner and
+              std_capabilities/PromptPoseRunner can be used to get the feedback on the position of the robot and by that, whether 
+              the robot has reached the position or not."
 interface:
   actions:
     "/navigate_to_pose":
