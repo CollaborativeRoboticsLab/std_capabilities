@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>std_capabilities</name>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <description>This package contains standard capability interfaces, which describe common robot capabilities in terms of ROS concepts such as topics, services, actions, and parameters.</description>
 
   <maintainer email="william@osrfoundation.org">William Woodall</maintainer>
@@ -16,29 +16,206 @@
   <author email="william@osrfoundation.org">William Woodall</author>
   <author email="marcus.liebhardt@yujinrobot.com">Marcus Liebhardt</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- export standard capabilities -->
   <export>
+    <build_type>ament_cmake</build_type>
+    <!-- interfaces -->
     <capability_interface>
       interfaces/Diagnostics.yaml
     </capability_interface>
+    
     <capability_interface>
       interfaces/DifferentialMobileBase.yaml
     </capability_interface>
+
     <capability_interface>
       interfaces/LaserSensor.yaml
     </capability_interface>
+
     <capability_interface>
       interfaces/MultiEchoLaserSensor.yaml
     </capability_interface>
+
     <capability_interface>
       interfaces/Navigation2D.yaml
     </capability_interface>
+
     <capability_interface>
       interfaces/RGBDSensor.yaml
     </capability_interface>
+
     <capability_interface>
       interfaces/RobotStatePublisher.yaml
     </capability_interface>
+
+    <capability_interface>
+      interfaces/empty.yaml
+    </capability_interface>
+
+    <!-- Nav2 interfaces -->
+    <capability_interface>
+      interfaces/nav2/WaypointRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/nav2/OccupancyGridRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/nav2/RobotPoseRunner.yaml
+    </capability_interface>
+
+    <!-- <capability_interface>
+      interfaces/nav2/Nav2LaunchRunner.yaml
+    </capability_interface> -->
+
+    <!-- PromptTools interfaces -->
+    <!-- <capability_interface>
+      interfaces/prompt/PromptLaunchRunner.yaml
+    </capability_interface> -->
+
+    <capability_interface>
+      interfaces/prompt/PromptTextRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/prompt/PromptPoseRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/prompt/PromptCapabilityRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/prompt/PromptOccupancyRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/prompt/PromptPlanRunner.yaml
+    </capability_interface>
+
+    <!-- Audio interfaces -->
+    <capability_interface>
+      interfaces/audio/ListenerRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/audio/SpeakerRunner.yaml
+    </capability_interface>
+
+    <!-- <capability_interface>
+      interfaces/audio/ListenerLaunchRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/audio/SpeakerLaunchRunner.yaml
+    </capability_interface> -->
+
+    <!-- Capaility interfaces -->
+    <capability_interface>
+      interfaces/capabilities/FabricCompletionRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/capabilities/FabricSetPlanRunner.yaml
+    </capability_interface>
+
+    <capability_interface>
+      interfaces/capabilities/CapabilityGetRunner.yaml
+    </capability_interface>
+
+    <!-- semantic interfaces -->
+    <semantic_capability_interface>
+      semantic_interfaces/not_empty.yaml
+    </semantic_capability_interface>
+
+    <!-- providers -->
+    <capability_provider>
+      providers/empty_launch_provider.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/empty_runner_provider.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/not_empty.yaml
+    </capability_provider>
+
+    <!-- Nav2 providers -->
+    <capability_provider>
+      providers/nav2/RobotPoseRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/nav2/OccupancyGridRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/nav2/WaypointRunner.yaml
+    </capability_provider>
+
+    <!-- <capability_provider>
+      providers/nav2/Nav2LaunchRunner.yaml
+    </capability_provider> -->
+
+    <!-- PromptTools providers -->
+    <!-- <capability_provider>
+      providers/prompt/PromptLaunchRunner.yaml
+    </capability_provider> -->
+
+    <capability_provider>
+      providers/prompt/PromptTextRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/prompt/PromptPoseRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/prompt/PromptCapabilityRunner.yaml
+    </capability_provider>
+
+
+    <capability_provider>
+      providers/prompt/PromptOccupancyRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/prompt/PromptPlanRunner.yaml
+    </capability_provider>
+
+    <!-- Audio providers -->
+    <capability_provider>
+      providers/audio/ListenerRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/audio/SpeakerRunner.yaml
+    </capability_provider>
+
+    <!-- <capability_provider>
+      providers/audio/ListenerLaunchRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/audio/SpeakerLaunchRunner.yaml
+    </capability_provider> -->
+
+    <!-- Capabilities providers -->
+    <capability_provider>
+      providers/capabilities/FabricCompletionRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/capabilities/FabricSetPlanRunner.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/capabilities/CapabilityGetRunner.yaml
+    </capability_provider>
+
   </export>
 </package>

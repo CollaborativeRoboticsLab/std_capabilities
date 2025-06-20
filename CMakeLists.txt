@@ -1,9 +1,26 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.10)
 project(std_capabilities)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package()
-
+# install interface files
 install(DIRECTORY interfaces
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# install semantic interface files
+install(DIRECTORY semantic_interfaces
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# install semantic interface files
+install(DIRECTORY providers
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# install launch files
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+ament_package()
