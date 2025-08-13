@@ -113,15 +113,12 @@
       interfaces/audio/SpeakerLaunchRunner.yaml
     </capability_interface> -->
 
+    <!-- fabric interfaces -->
+    <capability_interface>
+      interfaces/fabric/FabricSetPlanRunner.yaml
+    </capability_interface>
+
     <!-- Capaility interfaces -->
-    <capability_interface>
-      interfaces/capabilities/FabricCompletionRunner.yaml
-    </capability_interface>
-
-    <capability_interface>
-      interfaces/capabilities/FabricSetPlanRunner.yaml
-    </capability_interface>
-
     <capability_interface>
       interfaces/capabilities/CapabilityGetRunner.yaml
     </capability_interface>
@@ -204,15 +201,12 @@
       providers/audio/SpeakerLaunchRunner.yaml
     </capability_provider> -->
 
+    <!-- fabric providers -->
+    <capability_provider>
+      providers/fabric/FabricSetPlanRunner.yaml
+    </capability_provider>
+
     <!-- Capabilities providers -->
-    <capability_provider>
-      providers/capabilities/FabricCompletionRunner.yaml
-    </capability_provider>
-
-    <capability_provider>
-      providers/capabilities/FabricSetPlanRunner.yaml
-    </capability_provider>
-
     <capability_provider>
       providers/capabilities/CapabilityGetRunner.yaml
     </capability_provider>
